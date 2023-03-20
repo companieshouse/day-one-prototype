@@ -20,8 +20,35 @@
 
 
 {{ govukInsetText({
-  text: "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+  text: "You must sign in to or create a Companies House account. Your WebFiling details will not work with this service."
+}) }}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Email address",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Password",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+{{ govukButton({
+  text: "Sign in",
+  href: "company-number"
 }) }}
     </div>
   </div>
+
 {% endblock %}

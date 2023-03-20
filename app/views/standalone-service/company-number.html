@@ -4,6 +4,9 @@
   Start page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
 {% block header %}
   <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
@@ -20,7 +23,10 @@
    What is the company number?
 </h1>
       
-
+{{ govukButton({
+  text: "Continue",
+  href: "correct-company"
+}) }}
     </div>
   </div>
 {% endblock %}
