@@ -12,23 +12,58 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 <p class="govuk-body">
 <a class="govuk-link" href="https://app.mural.co/invitation/mural/companieshouse8589/1678105791072?sender=uafd9449cca8b586aabb58287&key=c0dac714-6ed7-4103-b7c1-87fac4655317" target="_blank">High level Mural flow (opens in new tab) </a> 
 </p>
-<ul class="govuk-list">
-  <li>
-    <a class="govuk-link" href="/standalone-service/index">Standalone service</a>
-  </li>
-  <li>
-    <a class="govuk-link" href="#">SCRS</a>
-  </li>
-  <li>
-    <a class="govuk-link" href="#">Confirmation Statement-Webfiling</a>
-  </li>
-   <li>
-    <a class="govuk-link" href="#">Confirmation Statement-CHS</a>
-  </li>
-  <li>
-    <a class="govuk-link" href="#">CHS-Overview</a>
-  </li>
-</ul>
+{{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly",
+      iconFallbackText: "Warning"
+    }) }}
+    
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Version</th>
+          <th class="govuk-table__header" scope="col">Sprint</th>
+          <th class="govuk-table__header" scope="col">Date</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+     
+       
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="v1/index">V1</a>
+          </td>
+          <td class="govuk-table__cell">
+            TBA
+          </td>
+          <td class="govuk-table__cell">
+            March 2023
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag-blue">
+              In progress
+            </strong>
+          </td>
+        </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 </div>
 

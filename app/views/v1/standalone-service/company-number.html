@@ -22,6 +22,25 @@
   
    What is the company number?
 </h1>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Content here",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+<p class="govuk-body">
+  
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "Details component",
+  text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+}) }}
       
 {{ govukButton({
   text: "Continue",

@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Day One Prototypes V1</h1>
+<p class="govuk-body">
+<a class="govuk-link" href="https://app.mural.co/invitation/mural/companieshouse8589/1678105791072?sender=uafd9449cca8b586aabb58287&key=c0dac714-6ed7-4103-b7c1-87fac4655317" target="_blank">High level Mural flow (opens in new tab) </a> 
+</p>
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="/v1/standalone-service/index">Standalone service</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="/v1/scrs/index">SCRS</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="/v1/cs-webfiling/index">Confirmation Statement-Webfiling</a>
+  </li>
+   <li>
+    <a class="govuk-link" href="/v1/cs-chs/index">Confirmation Statement-CHS</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="/v1/chs-profile/index">CHS-Company Profile</a>
+  </li>
+</ul>
+  </div>
+</div>
+
+{% endblock %}
