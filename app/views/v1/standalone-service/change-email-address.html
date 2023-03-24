@@ -1,16 +1,16 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Enter the updated registered company email address – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% set serviceName %}
+     Update a registered company email address
+{% endset%}
+{% block beforeContent %}
+  {% include "../includes/back-link.html" %}
+  {% include "../includes/user-bar.html" %}
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
 
 
 
@@ -18,15 +18,31 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-  
-   Change email address
-</h1>
+            <form class="form" action="check-your-answer" method="post">
+
+  {{govukTag({
+          text: "Content not final",
+          classes: "govuk-tag--red"
+        })}}
+
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="new-email">
+          Enter the updated registered company email address
+          </label>
+          </h1>
+          <p>The current email address is <strong>email@acmelimited.co.uk</strong></p>
+          <input class="govuk-input" id="new-email" name="new-email" type="text" aria-describedby="event-name-hint">
+        </div>
+
+
       
 {{ govukButton({
-  text: "Continue",
-  href: "check-your-answer"
+  text: "Continue"
 }) }}
+
+</form>
     </div>
   </div>
 {% endblock %}

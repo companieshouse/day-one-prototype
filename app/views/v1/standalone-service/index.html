@@ -1,12 +1,13 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Standalone service (V1) – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  {% include "../includes/back-link.html" %}
 {% endblock %}
+
 
 
 
@@ -16,28 +17,41 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-       Standalone Service V1
+       Standalone service (V1)
       </h1>
+{{ govukInsetText({
+  html: '<a class="govuk-link" href="https://app.mural.co/invitation/mural/companieshouse8589/1677662614247?sender=uafd9449cca8b586aabb58287&key=f3b74619-4e49-4994-8d2c-399ba93135a3" target="_blank">High level Mural flow (opens in new tab) </a>'
+}) }}
 
-<p class="govuk-body">
-<a class="govuk-link" href="https://app.mural.co/invitation/mural/companieshouse8589/1677662614247?sender=uafd9449cca8b586aabb58287&key=f3b74619-4e49-4994-8d2c-399ba93135a3" target="_blank">High level Mural flow (opens in new tab) </a> 
-</p>
 
-    <ul class="govuk-list">
+
+    <ul class="govuk-list govuk-list--bullet">
   <li>
     <a class="govuk-link" href="start">Start</a>
   </li>
   <li>
-    <a class="govuk-link" href="sign-in">Sign into Companies House</a>
+    <a class="govuk-link" href="sign-in">Sign into Companies House</a>   {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
   </li>
   <li>
-    <a class="govuk-link" href="company-number">What is the company number?</a>
+    <a class="govuk-link" href="company-number">What is the company number?</a>  {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
   </li>
    <li>
-    <a class="govuk-link" href="correct-company">Confirm this is the correct company</a>
+    <a class="govuk-link" href="correct-company">Confirm this is the correct company</a>  {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
   </li>
   <li>
-    <a class="govuk-link" href="auth-code">Enter the authentication code</a>
+    <a class="govuk-link" href="auth-code">Enter the authentication code</a>  {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
   </li>
   <li>
     <a class="govuk-link" href="change-email-address">Change registered email address</a>

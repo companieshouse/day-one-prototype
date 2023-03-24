@@ -4,3 +4,22 @@
 // 
 
 // Add extra styles here
+
+//Styles for user bar
+
+ul#navigation {
+    font-size: 0.9em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-family: 'GDS Transport', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    float: right;
+    
+    li {
+      display: inline;
+      font-size: 16px;
+      overflow-wrap: break-word;
+      a {margin-left: 0.9em;}
+    }
+  }

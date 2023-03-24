@@ -1,16 +1,14 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Confirm company details – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
+
+
 
 
 
@@ -18,88 +16,45 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-  
-   Confirm this is the correct company
-</h1>
-   {{ govukButton({
-  text: "Continue",
-  href: "auth-code"
-}) }}   
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+      <h1 class="govuk-heading-xl">Confirm company details</h1>
+ 
 
 {{ govukSummaryList({
   rows: [
     {
       key: {
-        text: "Name"
+        text: "Company name	"
       },
       value: {
-        text: "Sarah Philips"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "name"
-          }
-        ]
+        text: "ACME LIMITED"
       }
     },
     {
       key: {
-        text: "Date of birth"
+        text: "Company number	"
       },
-      value: {
-        text: "5 January 1978"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "date of birth"
-          }
-        ]
+    value: {
+        text: data['company-number']
       }
     },
     {
       key: {
-        text: "Address"
+        text: "Registered office address"
       },
       value: {
         html: "72 Guild Street<br>London<br>SE23 6FH"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "address"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Contact details"
-      },
-      value: {
-        html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "contact details"
-          }
-        ]
       }
     }
   ]
 }) }}
+
+
+   {{ govukButton({
+  text: "Continue",
+  href: "auth-code"
+}) }}  
+
+
     </div>
   </div>
 {% endblock %}
