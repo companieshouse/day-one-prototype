@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answer – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName %}
+     Update a registered company email address
+{% endset%}
+
+{% block beforeContent %}
+  {% include "../../includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <p>{{govukTag({
+          text: "Content possibly final",
+          classes: "govuk-tag--orange"
+        })}}</p>
+
+      <h1 class="govuk-heading-l">Check your answer before we verify your email address</h1>
+
+    
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+         
+          
+          
+          {
+            key: {
+              text: "Updated email address"
+            },
+               value: {
+            text: data['new-email']
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-email-address",
+                  text: "Change",
+                  visuallyHiddenText: "email address"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+
+     
+
+   
+
+
+        {{ govukButton({
+          text: "Continue",
+          href: "verify-your-email-address"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+
+
