@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Standalone service (V1) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/back-link.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+       Standalone service (V1)
+      </h1>
+{{ govukInsetText({
+  html: '<a class="govuk-link" href="https://app.mural.co/invitation/mural/companieshouse8589/1677662614247?sender=uafd9449cca8b586aabb58287&key=f3b74619-4e49-4994-8d2c-399ba93135a3" target="_blank">High level Mural flow (opens in new tab) </a>'
+}) }}
+
+
+
+    <ul class="govuk-list govuk-list--bullet">
+
+  <!--<li>
+    <a class="govuk-link" href="test-scenario ">Test scenario - verify email or not?</a>
+  </li>-->
+  <li>
+    <a class="govuk-link" href="start">Start</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="sign-in">Sign into Companies House</a>   {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
+  </li>
+  <li>
+    <a class="govuk-link" href="company-number">What is the company number?</a>  {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
+  </li>
+   <li>
+    <a class="govuk-link" href="correct-company">Confirm this is the correct company</a>  {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
+  </li>
+  <li>
+    <a class="govuk-link" href="auth-code">Enter the authentication code</a>  {{govukTag({
+          text: "Dev ready",
+          classes: "govuk-tag--green"
+        })}}
+  </li>
+  <li>
+    <a class="govuk-link" href="change-email-address">Change registered email address</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="check-your-answer">Check your answer</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="update-submitted">Update submitted</a>
+  </li>
+</ul>
+
+
+ <h2 class="govuk-heading-m">Verification</h2>
+    <ul class="govuk-list govuk-list--bullet">
+
+    <li>
+    <a class="govuk-link" href="verification/check-your-answer">Verification: Check your answer</a>
+  </li>
+      <li>
+    <a class="govuk-link" href="verification/verify-your-email-address">Verification: Verify your email address</a>
+  </li>
+        <li>
+    <a class="govuk-link" href="verification/success">Verification: Success</a>
+  </li>
+  </ul>
+
+ <h2 class="govuk-heading-m">Emails</h2>
+    <ul class="govuk-list govuk-list--bullet">
+   <li>
+    <a class="govuk-link" href="emails/verify-your-email-address">Verify your email</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="emails/application-received">Application received</a>
+  </li>
+   <li>
+    <a class="govuk-link" href="emails/application-accepted">Application accepted</a>
+  </li>
+   <li>
+    <a class="govuk-link" href="emails/application-rejected">Application rejected</a>
+  </li>
+
+
+
+</ul>
+
+    </div>
+  </div>
+
+{% endblock %}

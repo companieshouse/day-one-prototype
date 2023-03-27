@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ What's the company's registered email address? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% set serviceName %}
+     
+{% endset%}
+{% block beforeContent %}
+  {% include "../includes/back-link.html" %}
+  {% include "../includes/user-bar.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <form class="form" action="confirm-email-address" method="post">
+
+  {{govukTag({
+          text: "Content not final",
+          classes: "govuk-tag--red"
+        })}}
+
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="new-email">
+         What's the company's registered email address?
+          </label>
+          </h1>
+         
+         <p>In future, we may use this email address to send important information and notices to this company.</p>
+         <p>This email address will not be available on the Companies House online register.</p>
+         
+         
+          
+          <input class="govuk-input" id="new-email" name="new-email" type="text" name="new-email" aria-describedby="event-name-hint">
+        </div>
+
+
+      
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+
+</form>
+    </div>
+  </div>
+{% endblock %}

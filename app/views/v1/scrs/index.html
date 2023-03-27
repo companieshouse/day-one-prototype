@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  SCRS (V1) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/back-link.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+       SCRS (V1)
+      </h1>
+{{ govukInsetText({
+  html: '<a class="govuk-link" href="https://app.mural.co/invitation/mural/companieshouse8589/1676907629786?sender=uafd9449cca8b586aabb58287&key=027fd70c-a606-402d-ae77-1894fcc04e76" target="_blank">High level Mural flow (opens in new tab) </a>'
+}) }}
+
+
+
+    <ul class="govuk-list govuk-list--bullet">
+
+
+ 
+  <li>
+    <a class="govuk-link" href="provide-email-address">Provide registered email address</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="confirm-email-address">Confirm registered email address</a>
+  </li>
+ 
+</ul>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
