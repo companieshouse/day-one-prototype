@@ -36,9 +36,60 @@
          <p>In future, we may use this email address to send important information and notices to this company.</p>
          <p>This email address will not be available on the Companies House online register.</p>
          
+
+
+
+{% set newEmailHtml %}
+{{ govukInput({
+  id: "new-email",
+  name: "new-email",
+  type: "text",
+  classes: "govuk-!-width-one-half",
+  label: {
+    text: "Enter the email address"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  name: "new-email",
+  fieldset: {
+    legend: {
+      text: "What's the company's registered email address?",
+      isPageHeading: false,
+      classes: "govuk-visually-hidden"
+    }
+  },
+  
+  items: [
+    {
+      value: "existing-email",
+      text: "info@acme.co.uk",
+      conditional: {
+        html: emailHtml
+      }
+    },
+    {
+      value: "new-email",
+      text: "A different email address",
+      conditional: {
+        html: newEmailHtml
+      }
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+
+
          
           
-          <input class="govuk-input" id="new-email" name="new-email" type="text" name="new-email" aria-describedby="event-name-hint">
+          
         </div>
 
 
