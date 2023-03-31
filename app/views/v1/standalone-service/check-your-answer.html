@@ -17,6 +17,9 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+   <form class="form" method="post">
+
   <p>{{govukTag({
           text: "Content not final",
           classes: "govuk-tag--red"
@@ -62,8 +65,7 @@
 
 
         {{ govukButton({
-          text: "Accept and send",
-          href: "update-submitted"
+          text: "Accept and send"
         }) }}
 
       </form>
