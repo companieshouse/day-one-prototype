@@ -17,6 +17,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <form class="form" action="change-email-address" method="post">
+
+
+
       <h1 class="govuk-heading-xl">Company authentication</h1>
 
 <p>To file company information you will need an authentication code.</p>
@@ -37,12 +41,12 @@ Authenticating for<br>
 }) }}
 
     {{ govukButton({
-  text: "Authenticate",
-  href: "change-email-address"
+  text: "Authenticate"
 }) }}  
 
 <p><a href="javascript:void(0)" class="govuk-link">Request an authentication code</p>
 
+</form>
     </div>
   </div>
 {% endblock %}
