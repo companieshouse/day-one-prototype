@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Confirm company details – {{ serviceName }} – GOV.UK Prototype Kit
+  Confirm this is the correct company – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Confirm company details</h1>
+      <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
  
 
 {{ govukSummaryList({
@@ -39,10 +39,18 @@
     },
     {
       key: {
-        text: "Registered office address"
+        text: "Company type"
       },
       value: {
-        html: "72 Guild Street<br>London<br>SE23 6FH"
+        html: "Private limited company"
+      }
+    },
+        {
+      key: {
+        text: "Incorporation date"
+      },
+      value: {
+        text: "3 January 2004"
       }
     }
   ]
