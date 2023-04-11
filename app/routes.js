@@ -9,3 +9,14 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 
 router.use('/', require('./routes/v1-routes.js'))
+
+// Show session data and URLs in the terminal  
+router.use((req, res, next) => {  
+  const log = {  
+    method: req.method,  
+    url: req.originalUrl,  
+    data: req.session.data  
+  }  
+  console.log(JSON.stringify(log, null, 2))  
+  next()  
+}) 
