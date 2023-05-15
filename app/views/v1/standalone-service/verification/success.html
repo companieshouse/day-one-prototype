@@ -16,10 +16,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-  <p>{{govukTag({
-          text: "Content possibly final",
-          classes: "govuk-tag--orange"
-        })}}</p>
+
 
 {% set html %}
   <h3 class="govuk-notification-banner__heading">
@@ -34,10 +31,10 @@
   type: 'success'
 }) }}
 
-        {{ govukButton({
+       <!-- {{ govukButton({
           text: "Continue",
           href: "../update-submitted"
-        }) }}
+        }) }} -->
 
       </form>
 
