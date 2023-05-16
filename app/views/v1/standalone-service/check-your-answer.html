@@ -53,6 +53,25 @@
       }) }}
 
 
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "I confirm that the registered email address is an appropriate email address as outlined in section 88A(2) of the Companies Act 2006.",
+      isPageHeading: false,
+      classes: "govuk-visually-hidden"
+    }
+  },
+  items: [
+    {
+      value: "appropriate",
+      text: "I confirm that the registered email address is an appropriate email address as outlined in section 88A(2) of the Companies Act 2006."
+    }
+  ]
+}) }}
      
 
       {# <h2 class="govuk-heading-m">Now send your application</h2>
