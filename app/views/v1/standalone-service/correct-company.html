@@ -17,18 +17,13 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
+
+            <h1 class="govuk-heading-l">WEST HAM FOOTBALL CLUB LIMITED</h1>
+
  
 
 {{ govukSummaryList({
   rows: [
-    {
-      key: {
-        text: "Company name	"
-      },
-      value: {
-        text: "WEST HAM FOOTBALL CLUB LIMITED"
-      }
-    },
     {
       key: {
         text: "Company number	"
@@ -39,10 +34,10 @@
     },
     {
       key: {
-        text: "Company type"
+        text: "Status"
       },
       value: {
-        html: "Private limited company"
+        html: "Active"
       }
     },
         {
@@ -52,17 +47,41 @@
       value: {
         text: "5 July 1900"
       }
+    },
+        {
+      key: {
+        text: "Company type	"
+      },
+      value: {
+        text: "Private Limited Company"
+      }
+    },
+        {
+      key: {
+        text: "Date of next confirmation statement"
+      },
+      value: {
+        text: "28 April 2023"
+      }
+    },
+        {
+      key: {
+        text: "To be filed by	"
+      },
+      value: {
+        text: "12 May 2023"
+      }
     }
   ]
 }) }}
 
 
    {{ govukButton({
-  text: "Continue",
+  text: "Confirm and continue",
   href: "auth-code"
 }) }}  
 
-
+<p><a href="company-number">Choose a different company</a></p>
     </div>
   </div>
 {% endblock %}
