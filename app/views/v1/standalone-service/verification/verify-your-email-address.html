@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Check your answer – {{ serviceName }} – GOV.UK Prototype Kit
+  Verify your email address – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% set serviceName %}
@@ -25,8 +25,8 @@
 
             <p class="govuk-body">We've sent an email to <strong>  {{ data['new-email'] }} </strong>which contains a verification link.
 
-            <p class="govuk-body">Open the email.<br>
-            Select the verification link in the email.</p>  
+            <p class="govuk-body">Open the email.</p>
+            <p class="govuk-body">Select the verification link in the email.</p>  
 
 
             {{ govukInsetText({

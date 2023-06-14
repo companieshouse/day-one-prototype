@@ -23,11 +23,9 @@
 
   <p>We have sent a confirmation email to <strong> {{ data['email'] }} </strong> which contains your reference number.</p>
 
-       <h2 class="govuk-heading-m">What happens next</h2>
-      <p>In the next few days, we'll send an email to <strong> {{ data['email'] }} </strong> to let you know if the filing has been accepted or rejected. </p>
-
-
-
+       <h2 class="govuk-heading-m">What you need to do next</h2>
+      <p>In the next few days, we'll send an email to <strong> {{ data['new-email'] }} </strong> which contains a verification link. You'll need to open the email and select the link.</p> 
+      <p>Once the registered email address has been verified, we can process this  update filing. We'll send an email to <strong> {{ data['email'] }} </strong> to let you know if the filing has been accepted or rejected. </p>
      <p>If you also need to change the email address you use to sign in to your Companies House account, you can do this in <a href="https://identity.company-information.service.gov.uk/user/account">'Your details'</a>. To change your WebFiling email address, log in to <a href="https://idam-ui.company-information.service.gov.uk/account/login/?realm=/alpha&service=CHWebFiling-Login&authIndexType=service&authIndexValue=CHWebFiling-Login">WebFiling</a> and go to 'Manage account'.</p> 
 
 
