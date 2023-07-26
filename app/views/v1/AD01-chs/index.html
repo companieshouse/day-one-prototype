@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Change of registered office address (V1) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/back-link.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Change of registered office address (V1)
+      </h1>
+{{ govukInsetText({
+  html: '<a class="govuk-link" href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1678880979814/cae219f377dc99171b91a5e585c64bf16f097541?sender=jfrancis4080" target="_blank">High level Mural flow (opens in new tab) </a>'
+}) }}
+
+
+
+    <ul class="govuk-list govuk-list--bullet">
+
+
+  <li>
+    <a class="govuk-link" href="AD01">Change of registered office address (AD01)</a>
+  </li>
+    <li>
+    <a class="govuk-link" href="AD01-error">Change of registered office address (AD01) - with an error</a>
+  </li>
+
+
+  
+</ul>
+
+
+ 
+
+
+
+</ul>
+
+    </div>
+  </div>
+
+{% endblock %}

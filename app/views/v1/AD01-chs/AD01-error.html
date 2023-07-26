@@ -1,0 +1,129 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Error: Change of registered office address - Companies House - GOV.UK
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  {% include "../includes/back-link.html" %}
+
+
+
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#statement-error">You need to accept the registered office address statement</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      <h1 class="govuk-heading-xl">
+       Change of registered office address
+      </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">Current address<br>
+      <span class="govuk-!-font-weight-bold">Crown Way, Cardiff, Wales, CF14 3UZ</span></p>
+
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            What is the new address of the company?
+          </h2>
+        </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Building name or number
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+        </div>
+        <div class="govuk-form-group  govuk-!-margin-bottom-0">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+        <button class="govuk-button govuk-button--secondary govuk-!-margin-left-3" data-module="govuk-button">
+          Find address
+        </button></div>
+
+        <p class="govuk-body"><a href="" class="govuk-link">Enter address manually</a></p>
+
+
+      </fieldset>
+
+
+        <div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-4">
+          <fieldset class="govuk-fieldset" aria-describedby="statement-error">
+            <legend class="govuk-visually-hidden">
+               Registered office address statement
+            </legend>
+    <p id="statement-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> You need to accept the registered office address statement
+    </p>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="statement" name="statement" type="checkbox" value="rea-statement">
+                <label class="govuk-label govuk-checkboxes__label" for="statement">
+                  The new registered office address is an appropriate address as outlined in section 86(2) of the Companies Act 2006.
+                </label>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What does 'appropriate address' mean?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+              <p class="govuk-body">An address is an 'appropriate address' if, in the ordinary course of events:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>a document addressed to the company, and delivered there by hand or by post, would be expected to come to the attention of a person acting on behalf of the company, and</li>
+                <li>a person can get an acknowledgement of delivery, to record the delivery of documents to the new registered office address.</li>
+              </ul>
+
+              </div>
+            </details>
+          </fieldset>
+        </div>
+
+
+
+
+      <div class="govuk-button-group govuk-!-margin-top-8">
+        <button class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+       <a href="" class="govuk-link">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
