@@ -135,12 +135,80 @@
 
 
   {% set filingHistoryHtml %}
-
-
-
   {% endset -%}
 
+
+
+
+
   {% set peopleHtml %}
+<h2 class="govuk-heading-m govuk-!-margin-bottom-0 ">Annual statement</h2><br>
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Waste from animal carcasses
+        </label>
+      </div>
+
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-7">Annual statement</h2><br>
+   
+<h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-7">Annual statement</h2><br>
+
+
+<p class"govuk-body">Correspondence address<br>
+<strong>C/O Moore Chartered Accountants 2nd Floor, Southern House, 76-80 College Road, Harrow, Middlesex, United Kingdom, HA1 4BW 
+</strong>
+</p>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <p class"govuk-body">Incorporated in <strong class="govuk-tag">
+  Completed
+</strong> <br>
+
+      <strong>VIRGIN ISLANDS, BRITISH</strong>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <p class"govuk-body">Registration number<br>
+      <strong>1789717</strong>
+      </div>
+            <div class="govuk-grid-column-one-third">
+        <p class"govuk-body">Legal form<br>
+      <strong>Business Company</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <p class"govuk-body">Incorporated in<br>
+      <strong>VIRGIN ISLANDS, BRITISH</strong>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <p class"govuk-body">Registration number<br>
+      <strong>1789717</strong>
+      </div>
+            <div class="govuk-grid-column-one-third">
+        <p class"govuk-body">Legal form<br>
+      <strong>Business Company</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr> 
+
+
+
+
   {% endset -%}
 
   {% set viewallHtml %}
@@ -263,14 +331,14 @@
       label: "Charges",
       id: "charges",
       panel: {
-        html: peopleHtml
+        html: chargesHtml
       }
     },
     {
       label: "Insolvency",
       id: "insolvency",
       panel: {
-        html: peopleHtml
+        html: insolvencyHtml
       }
     },
     {
